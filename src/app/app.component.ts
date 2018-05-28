@@ -8,7 +8,13 @@ import { Component } from '@angular/core';
   template: `
   <div><h1>{{pageTitle}}</h1>
     <pm-products></pm-products>
-  </div>`
+  </div>
+  <div>
+    <pm-users></pm-users>
+  </div>
+  `
+
+  
  
 })
 export class AppComponent {
