@@ -47,6 +47,15 @@ export class UserListComponent{
                 "complement":"Lotissement",
                 "codePostal":"12740"
                 }
+        },
+        {
+            "nom": "Nom_4",
+            "prenom":"Prenom_4",
+            "adresse": {
+                "address":"Marseille",
+                "complement":"Lotissement",
+                "codePostal":"13000"
+                }
         }
     ]
 
@@ -59,6 +68,6 @@ export class UserListComponent{
 
     performFilter(filterBy: string): IUser[] {
         filterBy = filterBy.toLocaleLowerCase();
-        return this.users.filter((user : IUser) => user.adresse.codePostal.toLocaleLowerCase().indexOf(filterBy) !== -1);
+        return this.users.filter((user : IUser) => user.adresse.codePostal.toLocaleLowerCase().indexOf(filterBy) == 0);
     }
 }
