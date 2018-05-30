@@ -2,7 +2,8 @@
     <div class='panel-heading'>
         {{pageTitle}}
     </div>
-    <div class='panel-body'>
+    
+    <div class='panel-body'>             
         <div class='row'>
             <div class='col-md-2'>Filter by :</div>
             <div class='col-md-4'>
@@ -43,7 +44,11 @@
                                 [style.margin.px]='imageMargin'
                             />
                         </td>
-                        <td>{{product.productName | uppercase}}</td>
+                        <td>
+                            <a [routerLink]="['/products', product.productId]">
+                                {{product.productName | uppercase}}
+                            </a>
+                        </td>
                         <td>{{product.productCode | lowercase | convertToSpaces:'-'}}</td>
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency:'EUR':'symbol':'1.2-2':'fr-FR' }}  </td>
