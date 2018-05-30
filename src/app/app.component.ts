@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {ProductService} from './products/product.service';
 
 @Component({
   selector: 'pm-root',
@@ -12,8 +12,8 @@ import { Component } from '@angular/core';
   <div>
     <pm-users></pm-users>
   </div>
-  `
-
+  `,
+  providers: [ProductService]
   
  
 })
